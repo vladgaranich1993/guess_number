@@ -1,11 +1,12 @@
 'use strict';
 
-const secretNumber = Math.trunc(Math.random() * 20) + 1
+let secretNumber = Math.trunc(Math.random() * 20) + 1
 
 document.querySelector('.again').addEventListener('click', function () {
     document.querySelector('.message').textContent = 'Start guessing...'
     document.querySelector('.guess').value = null;
     document.querySelector('.number').textContent = '?'
+    secretNumber = Math.trunc(Math.random() * 20) + 1
 })
 
 document.querySelector('.check').addEventListener('click', function () {
